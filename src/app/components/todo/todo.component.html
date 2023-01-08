@@ -1,0 +1,6 @@
+<input #inputValue />
+<app-button
+  [skickaVidare]="inputValue"
+  (btnClicked)="input($event)"
+></app-button>
+<app-list [updatedList]="toDoList"></app-list>
