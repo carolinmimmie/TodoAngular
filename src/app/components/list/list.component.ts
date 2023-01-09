@@ -13,10 +13,8 @@ export class ListComponent {
   change(x: ToDo) {
     if (!x.completed) {
       x.completed = true;
-      // this.isComplete = true;
     } else {
       x.completed = false;
-      // this.isComplete = false;
     }
 
     console.log(x);
