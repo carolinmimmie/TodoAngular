@@ -1,15 +1,10 @@
 <div class="container-list">
-  
-
-  <ul *ngFor="let x of updatedList" >
-  <li >
-    
-    {{ x.title }}
-    <input class ="checkbox" type="checkbox"
-    >
-  </li>
-</ul>
-
+  <ul *ngFor="let x of updatedList">
+    <li class="checkbox" [ngClass]="{ 'todo-complete': isComplete }">
+      {{ x.title }}
+      <input type="checkbox" (click)="change(x)" />
+    </li>
+  </ul>
 </div>
 <!-- change event event namnet changeboolean -->
 <!-- [(ngModel)]="updatedList.completed" -->

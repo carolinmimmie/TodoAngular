@@ -6,11 +6,11 @@ import { Component, EventEmitter, Input, Output } from '@angular/core';
   styleUrls: ['./button.component.css'],
 })
 export class ButtonComponent {
-  @Input() skickaVidare!: HTMLInputElement;
+  @Input() skickaIn!: HTMLInputElement;
   //SKICKA MED INPUT TEXTEN
   @Output() btnClicked = new EventEmitter<string>();
 
   onClick() {
-    this.btnClicked.emit(this.skickaVidare.value);
+    this.btnClicked.emit(this.skickaIn.value);
   }
 }

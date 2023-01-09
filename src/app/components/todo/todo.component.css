@@ -1,5 +1,5 @@
-.input-container {
-    width: 600px;
+.todo-container {
+    width: 700px;
     margin: auto;
     background: rgb(198, 217, 243);
     display: flex;
@@ -8,8 +8,9 @@
     padding: 4rem;
   }
  input {
-    width: 200px;
+    width:300px;
     height: 30px;
     margin-bottom: 1rem;
+    border-radius: 1px;
   } 
   

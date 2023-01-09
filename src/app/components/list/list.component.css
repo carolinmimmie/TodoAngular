@@ -1,4 +1,18 @@
 .container-list {
   margin-top: 2rem;
 }
-
+.checkbox {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 1rem;
+  gap: 9rem;
+}
+input[type="checkbox"] {
+  transform: scale(1.5);
+  padding: 10px;
+}
+.todo-complete {
+  text-decoration: line-through;
+}
