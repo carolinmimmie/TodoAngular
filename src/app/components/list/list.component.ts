@@ -8,15 +8,15 @@ import { ToDo } from "src/app/todo.model";
 })
 export class ListComponent {
   @Input() updatedList!: ToDo[];
-  isComplete: boolean = false;
+  // isComplete: boolean = false;
 
   change(x: ToDo) {
     if (!x.completed) {
       x.completed = true;
-      this.isComplete = true;
+      // this.isComplete = true;
     } else {
       x.completed = false;
-      this.isComplete = false;
+      // this.isComplete = false;
     }
 
     console.log(x);

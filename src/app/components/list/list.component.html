@@ -1,6 +1,6 @@
 <div class="container-list">
   <ul *ngFor="let x of updatedList">
-    <li class="checkbox" [ngClass]="{ 'todo-complete': isComplete }">
+    <li class="checkbox" [ngClass]="{ 'todo-completed': x.completed }">
       {{ x.title }}
       <input type="checkbox" (click)="change(x)" />
     </li>
