@@ -1,15 +1,21 @@
-import { Component, EventEmitter, Input, Output } from '@angular/core';
-import { ToDo } from 'src/app/todo.model';
+import { Component, EventEmitter, Input, Output } from "@angular/core";
+import { ToDo } from "src/app/todo.model";
 
 @Component({
-  selector: 'app-list',
-  templateUrl: './list.component.html',
-  styleUrls: ['./list.component.css'],
+  selector: "app-list",
+  templateUrl: "./list.component.html",
+  styleUrls: ["./list.component.css"],
 })
 export class ListComponent {
-@Input() updatedList!:  ToDo [];
+  @Input() updatedList!: ToDo[];
+ 
+//  change(object: ToDo) {
+//     if (object.completed === false) {
+//        object.completed = true
 
-
+//     } 
+  
+//   }
 
 
   // toDoList: ToDo[] = [

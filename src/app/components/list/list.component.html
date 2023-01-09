@@ -1,5 +1,15 @@
-<ol>
-  <li *ngFor="let x of updatedList">
-    <input type="checkbox"> 
-    {{ x.title }}</li>
-</ol>
+<div class="container-list">
+  
+
+  <ul *ngFor="let x of updatedList" >
+  <li >
+    
+    {{ x.title }}
+    <input class ="checkbox" type="checkbox"
+    >
+  </li>
+</ul>
+
+</div>
+<!-- change event event namnet changeboolean -->
+<!-- [(ngModel)]="updatedList.completed" -->

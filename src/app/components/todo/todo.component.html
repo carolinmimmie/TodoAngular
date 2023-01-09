@@ -1,6 +1,8 @@
-<input #inputValue />
-<app-button
-  [skickaVidare]="inputValue"
-  (btnClicked)="input($event)"
-></app-button>
-<app-list [updatedList]="toDoList"></app-list>
+<div class="input-container">
+  <input #inputValue />
+  <app-button
+    [skickaVidare]="inputValue"
+    (btnClicked)="input($event)"
+  ></app-button>
+  <app-list [updatedList]="useridList"></app-list>
+</div>
