@@ -1,8 +1,8 @@
 <div class="todo-container">
   <h1>ToDo List</h1>
   <input #inputValue />
-  <app-button
-    [skickaIn]="inputValue"
+  <app-button buttonText="Add ToDo"
+    [sendInput]="inputValue"
     (btnClicked)="addTodo($event)"
   ></app-button>
   <app-list [updatedList]="useridList"></app-list>

@@ -1,4 +1,4 @@
-import { Component, EventEmitter, Input, Output } from "@angular/core";
+import { Component, Input } from "@angular/core";
 import { ToDo } from "src/app/todo.model";
 
 @Component({
@@ -8,7 +8,6 @@ import { ToDo } from "src/app/todo.model";
 })
 export class ListComponent {
   @Input() updatedList!: ToDo[];
-  // isComplete: boolean = false;
 
   change(x: ToDo) {
     if (!x.completed) {
@@ -16,7 +15,5 @@ export class ListComponent {
     } else {
       x.completed = false;
     }
-
-    console.log(x);
   }
 }

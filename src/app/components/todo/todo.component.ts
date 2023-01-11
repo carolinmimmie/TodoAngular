@@ -1,4 +1,4 @@
-import { Component, Input, OnInit, Output } from "@angular/core";
+import { Component, OnInit } from "@angular/core";
 import { ToDo } from "src/app/todo.model";
 import { HttpClient } from "@angular/common/http";
 @Component({
@@ -9,18 +9,15 @@ import { HttpClient } from "@angular/common/http";
 export class TodoComponent implements OnInit {
   addTodo(e: string) {
     //JAG VILL ATT EVENTET SKA PUSHAS IN I TODOLISTEN
-    this.useridList.push({ userId: 4, id: 4, title: e, completed: false });
+    this.useridList.unshift({ userId: 4, id: 4, title: e, completed: false });
     console.log(this.useridList);
 
-    console.log(e);
   }
 
-  toDoList!: ToDo[];
-
+  todoList!: ToDo[];
   useridList!: ToDo[];
 
   constructor(private http: HttpClient) {}
-  //KÖR METODEN UTAN ETT KLICK
   ngOnInit() {
     this.fetchToDo();
   }
@@ -29,11 +26,11 @@ export class TodoComponent implements OnInit {
     this.http
       .get<ToDo[]>("https://jsonplaceholder.typicode.com/todos")
       .subscribe((res: ToDo[]) => {
-        this.toDoList = res;
-        this.useridList = this.toDoList.filter(
+        this.todoList = res;
+        this.useridList = this.todoList.filter(
           (x) => x.userId === 4 && x.completed === false
         );
-        console.log(this.useridList);
+       
       });
   }
 }
